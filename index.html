@@ -1,26 +1,175 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>spare-craft-parts-hub</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spare Craft Parts Hub</title>
+  <meta name="description" content="Quality spare parts for industrial machinery and crafting equipment">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <h1>Spare<span>Craft</span></h1>
+        <p>Industrial Machine Parts</p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="categories.html">Categories</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
 
-    <meta property="og:title" content="spare-craft-parts-hub" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h2>Precision Engineering Parts</h2>
+        <p>Supplying quality machine parts to industries for over 35 years</p>
+        <a href="categories.html" class="btn-primary">Browse Parts</a>
+      </div>
+    </div>
+  </section>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+  <section class="about">
+    <div class="container">
+      <div class="section-header">
+        <h2>About Our Workshop</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="about-content">
+        <div class="about-text">
+          <p>Since 1985, SpareCraft has been a trusted supplier of high-quality spare parts for industrial machinery. Our workshop specializes in manufacturing and sourcing precision components that keep your equipment running at optimal performance.</p>
+          <p>With a team of experienced engineers and technicians, we ensure each part meets the exact specifications required for your machines, minimizing downtime and maximizing productivity.</p>
+          <p>Whether you need replacement parts for looms, feeders, motors, or specialized industrial equipment, our extensive inventory and custom fabrication capabilities have you covered.</p>
+        </div>
+        <div class="about-image">
+          <img src="assets/images/workshop.jpg" alt="Our workshop facility with machinery and tools">
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <body>
-    <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <section class="history">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Heritage</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="year">1985</div>
+          <div class="event">
+            <h3>Workshop Founded</h3>
+            <p>Started as a small repair shop for local textile industries</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="year">1995</div>
+          <div class="event">
+            <h3>Manufacturing Expansion</h3>
+            <p>Began producing our own line of replacement parts</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="year">2005</div>
+          <div class="event">
+            <h3>International Distribution</h3>
+            <p>Expanded to serving clients across three continents</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="year">2020</div>
+          <div class="event">
+            <h3>Digital Transformation</h3>
+            <p>Launched online catalog and automated inventory system</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <div class="container">
+      <div class="section-header">
+        <h2>Workshop Gallery</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="assets/images/gallery/machining.jpg" alt="Precision machining process">
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/gallery/assembly.jpg" alt="Parts assembly workstation">
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/gallery/quality-check.jpg" alt="Quality control inspection">
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/gallery/warehouse.jpg" alt="Parts warehouse and storage">
+        </div>
+      </div>
+      <div class="video-container">
+        <h3>See Our Workshop in Action</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Workshop Tour Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="categories" id="categories-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Browse Parts By Category</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="categories-grid" id="categories-grid">
+        <!-- Categories will be loaded dynamically here -->
+        <div class="loading">
+          <div class="spinner"></div>
+          <p>Loading categories...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col">
+          <h3>SpareCraft</h3>
+          <p>Your trusted source for quality machine parts since 1985.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Contact Info</h3>
+          <p>123 Workshop Lane<br>Industrial District<br>Machinery City, MC 54321</p>
+          <p>Phone: (555) 123-4567<br>Email: info@sparecraft.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 SpareCraft Parts Hub. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
+</body>
 </html>

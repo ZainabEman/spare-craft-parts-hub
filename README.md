@@ -1,73 +1,81 @@
-# Welcome to your Lovable project
 
-## Project info
+# SpareCraft Parts Hub
 
-**URL**: https://lovable.dev/projects/8e335ea7-1958-4a4f-a5f5-e8c6509a6a85
+A machine spare parts workshop website built with HTML, CSS, and vanilla JavaScript for the frontend, and Node.js with Express for the backend. The application connects to a Supabase PostgreSQL database for data storage.
 
-## How can I edit this code?
+## Project Structure
 
-There are several ways of editing your application.
+- **Frontend**: Static HTML, CSS, and vanilla JavaScript
+- **Backend**: Node.js and Express.js API server
+- **Database**: Supabase (PostgreSQL)
 
-**Use Lovable**
+## Features
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/8e335ea7-1958-4a4f-a5f5-e8c6509a6a85) and start prompting.
+- Workshop introduction with historical background
+- Image gallery and video showcase
+- Category browsing
+- Detailed spare parts listings
+- Part detail pages with image carousel
+- Contact form
+- Responsive design for all devices
+- Dynamic data loading from backend API
 
-Changes made via Lovable will be committed automatically to this repo.
+## Setup Instructions
 
-**Use your preferred IDE**
+### Frontend
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+1. Place all HTML, CSS, JS, and asset files on your static hosting provider (Netlify, Vercel, etc.)
+2. Update the `API_BASE_URL` in `js/main.js` to point to your deployed backend
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Backend
 
-Follow these steps:
+1. Navigate to the `server` directory
+2. Install dependencies:
+   ```
+   npm install
+   ```
+3. Create a `.env` file based on `.env.example` with your Supabase credentials
+4. Start the server:
+   ```
+   npm start
+   ```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Database
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+1. Create a new Supabase project
+2. Run the SQL commands in `supabase/schema.sql` to set up your database schema and sample data
+3. Use the provided Supabase URL and anon key in your backend `.env` file
 
-# Step 3: Install the necessary dependencies.
-npm i
+## API Endpoints
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+- **GET /api/categories** - Get all categories
+- **GET /api/spare-parts?category=id** - Get spare parts by category
+- **GET /api/spare-part/:id** - Get details of a specific spare part
 
-**Edit a file directly in GitHub**
+## Database Schema
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Categories Table
+- id (uuid, primary key)
+- name (text)
+- description (text)
+- image (text, URL)
 
-**Use GitHub Codespaces**
+### Spare Parts Table
+- id (uuid, primary key)
+- name (text)
+- main_image (text, URL)
+- additional_images (json, array of URLs)
+- part_number (text)
+- label (text)
+- description (text)
+- category_id (uuid, foreign key referencing categories.id)
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Deployment
 
-## What technologies are used for this project?
+- Frontend: Deploy to Netlify, Vercel, or any static hosting provider
+- Backend: Deploy to Heroku, Railway, Render, or similar service
+- Database: Use your Supabase project in production
 
-This project is built with:
+## Credits
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/8e335ea7-1958-4a4f-a5f5-e8c6509a6a85) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+SpareCraft Parts Hub - Created as a demonstration of a full-stack application using HTML, CSS, JavaScript, Node.js, Express, and Supabase.
